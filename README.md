@@ -16,7 +16,9 @@ PAlloc是后来我加的一个多线程安全版本的Alloc,目的也是为了�
 
 安装说明
 ------------
-go get github.com/cuixin/proxy
+```
+	go get github.com/cuixin/buff4g
+```
 
 使用说明
 ------------
@@ -27,10 +29,14 @@ go get github.com/cuixin/proxy
 ```
 
 多线程安全的版本，必须先在线程安全的程序中初始化:  
-InitBuffer(1024 * 200, 4)  
+```
+	InitBuffer(1024 * 200, 4)  
+```
 1024*200代表每个内存区块的大小(200K)，4代表池大小  
 池大小必须为2的次方,1,2,4,8,16,32...  
+```
 	buf := bb.PAlloc(64)
+```
 
 License
 -------
